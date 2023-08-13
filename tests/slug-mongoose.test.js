@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const slugMongoose = require("../dist/bundle.cjs");
+const slugMongoose = require("../src");
 
 describe("slug-mongoose with perfect options", () => {
   let MyModel;
