@@ -1,0 +1,41 @@
+{
+  "name": "slug-mongoose",
+  "version": "1.0.0",
+  "description": "slug-mongoose is a versatile npm package that simplifies the process of adding slug functionality to your Mongoose schemas...",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterEst/slug-mongoose.git"
+  },
+  "keywords": [
+    "mongoose",
+    "mongodb",
+    "javascript",
+    "models",
+    "slug",
+    "slugger",
+    "unique",
+    "slugify",
+    "url-friendly"
+  ],
+  "author": "PeterEst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PeterEst/slug-mongoose/issues"
+  },
+  "homepage": "https://github.com/PeterEst/slug-mongoose#readme",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "jest": "^29.6.2",
+    "mongoose": "^7.4.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "peerDependencies": {
+    "mongoose": "^7.4.3"
+  }
+}

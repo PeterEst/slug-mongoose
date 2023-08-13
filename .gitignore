@@ -1,0 +1,41 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore built output
+dist/
+
+# Ignore TypeScript configuration files
+tsconfig.json
+tsconfig.*.json
+
+# Ignore npm debugging logs
+npm-debug.log*
+
+# Ignore yarn lockfile
+yarn.lock
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore package-lock.json file (if you're using npm)
+package-lock.json
+
+# Ignore .npmignore file
+.npmignore
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore any build artifacts or editor-specific files
+build/
+out/
+.DS_Store
+*.log
+*.log.*
+.idea/
+*.swp
+*.swo
