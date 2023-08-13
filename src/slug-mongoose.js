@@ -1,24 +1,37 @@
 /**
+ * Default options
+ */
+const defaultOptions = {
+  field: "name",
+  slugField: "slug",
+};
+
+/**
  *  Add slug field to mongoose schema
  *
  * @param schema  mongoose schema
  * @param options  options
  */
 function slugMongoose(schema, options) {
-  const { field = "name", slugField = "slug" } = options;
+  /**
+   * Merge options
+   */
+  options = Object.assign({}, defaultOptions, options);
+
+  const { field, slugField } = options;
 
   /**
    * Check if field exists
    */
   if (!schema.path(field)) {
-    throw new Error(`Field ${field} does not exist in schema`);
+    throw new Error(`Field does not exist in schema`);
   }
 
   /**
    * Check if slug field exists
    */
   if (schema.path(slugField)) {
-    throw new Error(`Slug field ${slugField} already exists in schema`);
+    throw new Error(`Slug field already exists in schema`);
   }
 
   /**
