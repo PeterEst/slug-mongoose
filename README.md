@@ -67,7 +67,7 @@ The **slug-mongoose** plugin accepts the following options:
 
 ## Compatibility
 
-**slug-mongoose** supports CommonJS environments for now and latest mongoose versions, making it easy to integrate with your projects.
+**slug-mongoose** supports both CommonJS and ES Modules environments and latest mongoose versions, making it easy to integrate with your projects.
 
 ## License
 
