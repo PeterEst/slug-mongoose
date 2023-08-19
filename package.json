@@ -2,16 +2,10 @@
   "name": "slug-mongoose",
   "version": "1.0.5",
   "description": "slug-mongoose is a versatile npm package that simplifies the process of adding slug functionality to your Mongoose schemas...",
-  "main": "dist/cjs/index.js",
-  "exports": {
-    ".": {
-      "node": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
-    }
-  },
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf dist && tsc",
+    "build": "tsc",
     "publish": "npm run build && npm publish",
     "prepublishOnly": "npm test"
   },
