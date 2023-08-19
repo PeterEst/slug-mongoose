@@ -1,6 +1,7 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 require("dotenv").config();
 
 module.exports = {
+  preset: "ts-jest",
   testEnvironment: "node",
-  testTimeout: 30000,
 };

@@ -1,10 +1,13 @@
-/**
- * Default options
- */
-const defaultOptions = {
-  field: "name",
-  slugField: "slug",
-};
+import { Document, Model, Schema } from "mongoose";
+
+interface Options {
+  field: string;
+  slugField: string;
+}
+
+interface CustomModel<T extends Document> extends Model<T> {
+  findBySlug(slug: string): Promise<T | null>;
+}
 
 /**
  *  Add slug field to mongoose schema
@@ -12,7 +15,15 @@ const defaultOptions = {
  * @param schema  mongoose schema
  * @param options  options
  */
-function slugMongoose(schema, options) {
+function slugMongoose(schema: Schema, options: Options) {
+  /**
+   * Default options
+   */
+  const defaultOptions = {
+    field: "name",
+    slugField: "slug",
+  };
+
   /**
    * Merge options
    */
@@ -62,7 +73,7 @@ function slugMongoose(schema, options) {
     /**
      * Check if slug already exists
      */
-    const model = self.constructor;
+    const model = self.constructor as CustomModel<Document>;
     const slugRegex = new RegExp(`^(${slug})((-[0-9]*$)?)$`, "i");
     const docsWithSlug = await model.find({ slug: slugRegex });
 
@@ -86,4 +97,4 @@ function slugMongoose(schema, options) {
   };
 }
 
-module.exports = slugMongoose;
+export default slugMongoose;
